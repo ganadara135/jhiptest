@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.soteria.jhister",
+      "nativeLanguage": "ko"
+    },
+    "jhipsterVersion": "6.10.5",
+    "applicationType": "monolith",
+    "baseName": "jbackend",
+    "packageName": "com.soteria.jhister",
+    "packageFolder": "com/soteria/jhister",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mariadb",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "Y2FkMjc4ZTkwYjg1ZTJlNTkwMzhmNzEwNDc1YzNlNzc5ZGMzNTU0Y2EzNDMwZjUwOGI2ZGU2OWZiMzJlMGZmOWYwNzQ3OTMyNjYyMGYyOGE4ZTUwYzVjZTFhMDQxZjA4ZTIwZTY3YjM0M2YxNWM0ZmRiMGY4YjZkMjQ4YTNiMTk=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "creationTimestamp": 1615657714732,
+    "testFrameworks": ["gatling", "cucumber", "protractor"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "ko",
+    "languages": ["ko", "en"],
+    "blueprints": []
+  }
+}
