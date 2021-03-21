@@ -12,14 +12,6 @@ import { RegisterTypes } from '../../modules/account/register/register.reducer';
 import { ForgotPasswordTypes } from '../../modules/account/password-reset/forgot-password.reducer';
 import { ChangePasswordTypes } from '../../modules/account/password/change-password.reducer';
 import { UserTypes } from '../../shared/reducers/user.reducer';
-import { CountryTypes } from '../../modules/entities/country/country.reducer';
-import { DepartmentTypes } from '../../modules/entities/department/department.reducer';
-import { EmployeeTypes } from '../../modules/entities/employee/employee.reducer';
-import { JobTypes } from '../../modules/entities/job/job.reducer';
-import { JobHistoryTypes } from '../../modules/entities/job-history/job-history.reducer';
-import { LocationTypes } from '../../modules/entities/location/location.reducer';
-import { RegionTypes } from '../../modules/entities/region/region.reducer';
-import { TaskTypes } from '../../modules/entities/task/task.reducer';
 // jhipster-react-native-saga-redux-import-needle
 
 /* ------------- Sagas ------------- */
@@ -31,14 +23,6 @@ import { forgotPassword } from '../../modules/account/password-reset/forgot-pass
 import { changePassword } from '../../modules/account/password/change-password.sagas';
 import { getAccount, updateAccount } from '../../shared/sagas/account.sagas';
 import UserSagas from '../../shared/sagas/user.sagas';
-import CountrySagas from '../../modules/entities/country/country.sagas';
-import DepartmentSagas from '../../modules/entities/department/department.sagas';
-import EmployeeSagas from '../../modules/entities/employee/employee.sagas';
-import JobSagas from '../../modules/entities/job/job.sagas';
-import JobHistorySagas from '../../modules/entities/job-history/job-history.sagas';
-import LocationSagas from '../../modules/entities/location/location.sagas';
-import RegionSagas from '../../modules/entities/region/region.sagas';
-import TaskSagas from '../../modules/entities/task/task.sagas';
 // jhipster-react-native-saga-method-import-needle
 
 /* ------------- API ------------- */
@@ -58,46 +42,6 @@ export default function* root() {
     takeLatest(LoginTypes.LOGIN_LOAD, loginLoad, api),
     takeLatest(LoginTypes.LOGIN_REQUEST, login, api),
     takeLatest(LoginTypes.LOGOUT_REQUEST, logout, api),
-
-    takeLatest(CountryTypes.COUNTRY_REQUEST, CountrySagas.getCountry, api),
-    takeLatest(CountryTypes.COUNTRY_ALL_REQUEST, CountrySagas.getAllCountries, api),
-    takeLatest(CountryTypes.COUNTRY_UPDATE_REQUEST, CountrySagas.updateCountry, api),
-    takeLatest(CountryTypes.COUNTRY_DELETE_REQUEST, CountrySagas.deleteCountry, api),
-
-    takeLatest(DepartmentTypes.DEPARTMENT_REQUEST, DepartmentSagas.getDepartment, api),
-    takeLatest(DepartmentTypes.DEPARTMENT_ALL_REQUEST, DepartmentSagas.getAllDepartments, api),
-    takeLatest(DepartmentTypes.DEPARTMENT_UPDATE_REQUEST, DepartmentSagas.updateDepartment, api),
-    takeLatest(DepartmentTypes.DEPARTMENT_DELETE_REQUEST, DepartmentSagas.deleteDepartment, api),
-
-    takeLatest(EmployeeTypes.EMPLOYEE_REQUEST, EmployeeSagas.getEmployee, api),
-    takeLatest(EmployeeTypes.EMPLOYEE_ALL_REQUEST, EmployeeSagas.getAllEmployees, api),
-    takeLatest(EmployeeTypes.EMPLOYEE_UPDATE_REQUEST, EmployeeSagas.updateEmployee, api),
-    takeLatest(EmployeeTypes.EMPLOYEE_DELETE_REQUEST, EmployeeSagas.deleteEmployee, api),
-
-    takeLatest(JobTypes.JOB_REQUEST, JobSagas.getJob, api),
-    takeLatest(JobTypes.JOB_ALL_REQUEST, JobSagas.getAllJobs, api),
-    takeLatest(JobTypes.JOB_UPDATE_REQUEST, JobSagas.updateJob, api),
-    takeLatest(JobTypes.JOB_DELETE_REQUEST, JobSagas.deleteJob, api),
-
-    takeLatest(JobHistoryTypes.JOB_HISTORY_REQUEST, JobHistorySagas.getJobHistory, api),
-    takeLatest(JobHistoryTypes.JOB_HISTORY_ALL_REQUEST, JobHistorySagas.getAllJobHistories, api),
-    takeLatest(JobHistoryTypes.JOB_HISTORY_UPDATE_REQUEST, JobHistorySagas.updateJobHistory, api),
-    takeLatest(JobHistoryTypes.JOB_HISTORY_DELETE_REQUEST, JobHistorySagas.deleteJobHistory, api),
-
-    takeLatest(LocationTypes.LOCATION_REQUEST, LocationSagas.getLocation, api),
-    takeLatest(LocationTypes.LOCATION_ALL_REQUEST, LocationSagas.getAllLocations, api),
-    takeLatest(LocationTypes.LOCATION_UPDATE_REQUEST, LocationSagas.updateLocation, api),
-    takeLatest(LocationTypes.LOCATION_DELETE_REQUEST, LocationSagas.deleteLocation, api),
-
-    takeLatest(RegionTypes.REGION_REQUEST, RegionSagas.getRegion, api),
-    takeLatest(RegionTypes.REGION_ALL_REQUEST, RegionSagas.getAllRegions, api),
-    takeLatest(RegionTypes.REGION_UPDATE_REQUEST, RegionSagas.updateRegion, api),
-    takeLatest(RegionTypes.REGION_DELETE_REQUEST, RegionSagas.deleteRegion, api),
-
-    takeLatest(TaskTypes.TASK_REQUEST, TaskSagas.getTask, api),
-    takeLatest(TaskTypes.TASK_ALL_REQUEST, TaskSagas.getAllTasks, api),
-    takeLatest(TaskTypes.TASK_UPDATE_REQUEST, TaskSagas.updateTask, api),
-    takeLatest(TaskTypes.TASK_DELETE_REQUEST, TaskSagas.deleteTask, api),
     // jhipster-react-native-saga-redux-connect-needle
 
     takeLatest(RegisterTypes.REGISTER_REQUEST, register, api),

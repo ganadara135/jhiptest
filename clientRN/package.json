@@ -14,7 +14,7 @@
     "precommit": "lint-staged",
     "prettier": "prettier --write \"{,.,**/,.jhipster/**/}*.{md,json,yml,js,ts,tsx}\"",
     "publish": "expo publish",
-    "start": "expo start",
+    "start": "REACT_NATIVE_PACKAGER_HOSTNAME=192.168.0.36 expo start",
     "start:e2e": "expo start --no-dev --minify",
     "test": "jest",
     "test:e2e": "./e2e/scripts/setup.sh && detox test --configuration ios.sim.release --retries 3",

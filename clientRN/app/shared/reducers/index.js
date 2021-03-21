@@ -9,14 +9,6 @@ import ReduxPersist from '../../config/redux-persist';
 export const reducers = combineReducers({
   appState: require('./app-state.reducer').reducer,
   users: require('./user.reducer').reducer,
-  countries: require('../../modules/entities/country/country.reducer').reducer,
-  departments: require('../../modules/entities/department/department.reducer').reducer,
-  employees: require('../../modules/entities/employee/employee.reducer').reducer,
-  jobs: require('../../modules/entities/job/job.reducer').reducer,
-  jobHistories: require('../../modules/entities/job-history/job-history.reducer').reducer,
-  locations: require('../../modules/entities/location/location.reducer').reducer,
-  regions: require('../../modules/entities/region/region.reducer').reducer,
-  tasks: require('../../modules/entities/task/task.reducer').reducer,
   // jhipster-react-native-redux-store-import-needle
   account: require('./account.reducer').reducer,
   login: require('../../modules/login/login.reducer').reducer,

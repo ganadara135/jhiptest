@@ -4,11 +4,42 @@ This application was generated using JHipster 6.10.5, you can find documentation
 
 ## Development
 
-To start your application in the dev profile, run:
+1. start DB on docker
+
+```
+docker-compose -f src/main/docker/mariadb.yml up
+```
+
+2. To start backend in the dev profile, run:
 
 ```
 ./mvnw
 ```
+
+3. start React-Native app
+
+```
+cd ./clientRN
+npm start
+```
+
+I(kcod) changed some configuration,
+
+- mail server : smtp.gmail.com
+- activation page on server template : remove 'account' path in 'activationEmail.html'
+
+```
+<a th:with="url=(@{|${baseUrl}/activate?key=${user.activationKey}|})" th:href="${url}"
+            th:text="${url}">Activation link</a>
+```
+
+- react-native app-config.js : localhost -> ip address
+
+```
+apiUrl: 'http://192.168.0.36:8080/',
+```
+
+- add application*.* in .gitignore
 
 For further instructions on how to develop with JHipster, have a look at [Using JHipster in development][].
 

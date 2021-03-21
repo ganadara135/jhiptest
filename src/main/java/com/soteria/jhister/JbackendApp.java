@@ -92,7 +92,7 @@ public class JbackendApp {
             protocol,
             hostAddress,
             serverPort,
-            contextPath,
+            // contextPath,
             env.getActiveProfiles());
     }
 }
